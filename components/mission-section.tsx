@@ -6,17 +6,17 @@ export function MissionSection() {
   return (
     <section id="mission-contact" className="relative py-24 bg-[#fafafa] overflow-hidden">
       {/* Title */}
-      <div className="flex items-center justify-center gap-4 mb-20 relative z-20">
-        <div className="flex flex-col gap-1.5 items-end">
-          <div className="w-16 h-[1px] bg-[#F5B82A]"></div>
-          <div className="w-8 h-[1px] bg-[#F5B82A]"></div>
+      <div className="flex items-center justify-center gap-4 mb-20 relative z-20 group cursor-default">
+        <div className="flex flex-col gap-1.5 items-start w-12">
+          <div className="w-12 h-[1px] bg-[#F5B82A] transition-all duration-500 ease-in-out group-hover:w-8"></div>
+          <div className="w-6 h-[1px] bg-[#F5B82A] transition-all duration-500 ease-in-out group-hover:w-10"></div>
         </div>
         <h2 className="text-3xl md:text-4xl tracking-widest font-light text-gray-900">
           <span className="text-[#F5B82A]">OUR</span> <span className="font-bold">MISSION</span>
         </h2>
-        <div className="flex flex-col gap-1.5 items-start">
-          <div className="w-16 h-[1px] bg-[#F5B82A]"></div>
-          <div className="w-8 h-[1px] bg-[#F5B82A]"></div>
+        <div className="flex flex-col gap-1.5 items-end w-12">
+          <div className="w-12 h-[1px] bg-[#F5B82A] transition-all duration-500 ease-in-out group-hover:w-8"></div>
+          <div className="w-6 h-[1px] bg-[#F5B82A] transition-all duration-500 ease-in-out group-hover:w-10"></div>
         </div>
       </div>
 

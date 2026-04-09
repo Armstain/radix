@@ -6,6 +6,7 @@ import { CategoriesSection } from '@/components/categories-section';
 import { ProjectsSection } from '@/components/projects-section';
 import { AboutSection } from '@/components/about-section';
 import { ValueSection } from '@/components/value-section';
+import { ServicesSection } from '@/components/services-section';
 import { FeaturedProjectSection } from '@/components/featured-project-section';
 import { ProcessSection } from '@/components/process-section';
 import { TestimonialsSection } from '@/components/testimonials-section';
@@ -20,9 +21,11 @@ export default function Home() {
 
       <HeroSection />
       <CategoriesSection />
-      <MarqueeSection />
-      <ValueSection />
+      {/* <MarqueeSection /> */}
       <AboutSection />
+      <ValueSection />
+      <ServicesSection />
+
       {/* <ProcessSection />
       <ProjectsSection />
       <FeaturedProjectSection />

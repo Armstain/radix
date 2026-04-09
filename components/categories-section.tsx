@@ -1,5 +1,7 @@
 'use client';
 
+import Image from "next/image";
+
 export function CategoriesSection() {
   return (
     <section id="categories" className="relative pt-20 pb-40 bg-white overflow-hidden">
@@ -14,10 +16,9 @@ export function CategoriesSection() {
             { id: 6, title: 'Interior', image: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&q=80' },
           ].map((cat) => (
             <div key={cat.id} className="group relative w-full aspect-[4/3] overflow-hidden cursor-pointer">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={cat.image} alt={cat.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <Image width={200} height={100} src={cat.image} alt={cat.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/40"></div>
-              
+
               {/* Hover Reveal Bar */}
               <div className="absolute bottom-0 left-0 w-full bg-white translate-y-full transition-transform duration-500 group-hover:translate-y-0 flex items-center justify-between">
                 <span className="pl-6 font-medium text-gray-900">{cat.title}</span>

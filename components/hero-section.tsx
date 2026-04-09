@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const heroSlides = [
   {
@@ -9,34 +9,30 @@ const heroSlides = [
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=85&fit=crop',
     title: 'We Shape<br/><em>Living Space.</em>',
     subtitle: 'Interior & Construction · Dhaka',
-    description: 'Founded in 2000 by Mr. Abdur Rahim, RADIX is a reputed interior design and construction company in Bangladesh, delivering innovative solutions and exceptional service.'
   },
   {
     id: 2,
     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=85&fit=crop',
     title: 'Architectural<br/><em>Excellence.</em>',
     subtitle: 'Planning & Designing',
-    description: 'Offering a tailored strategy with project presentation, analysis, feasibility study, land-use plan, cost estimates, and development approach.'
   },
   {
     id: 3,
     image: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=1920&q=85&fit=crop',
     title: 'Interior Design<br/><em>& Decoration.</em>',
     subtitle: 'Crafting Environments',
-    description: 'Wall options, ceiling choices, flooring selections, glass partitions, aluminum designs, trendy furniture, and more.'
   },
   {
     id: 4,
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=85&fit=crop',
     title: 'Large-Scale<br/><em>Construction.</em>',
     subtitle: 'Civil Engineering',
-    description: 'Structural construction from foundation to finish. We manage contractors, timelines, and quality control.'
   }
 ];
 
 export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slideDuration = 5000;
+  const slideDuration = 6000; // Increased slightly for animation visibility
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -48,43 +44,110 @@ export function HeroSection() {
   return (
     <section id="hero" className="relative h-screen w-full overflow-hidden bg-[var(--dark)]">
       {/* Slides */}
-      {heroSlides.map((slide, idx) => (
-        <div
-          key={slide.id}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-            idx === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
-          }`}
-        >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={slide.image}
-            alt="Hero background"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/40"></div>
-          
-          <div className="absolute inset-0 flex flex-col justify-center px-8 md:px-16 lg:px-[60px] z-20 text-white">
-            <p className="text-[11px] tracking-[3px] uppercase text-[var(--taupe)] mb-8 flex items-center gap-[14px]" style={{ fontFamily: 'var(--ff-mono)' }}>
-              <span className="w-[40px] h-px bg-[var(--taupe)]"></span>
-              {slide.subtitle}
-            </p>
-            <h1 
-              className="text-[clamp(64px,7vw,100px)] font-normal leading-[1.05] tracking-[-1px] mb-7 [&>em]:italic [&>em]:text-[var(--terra)]" 
-              style={{ fontFamily: 'var(--ff-display)' }}
-              dangerouslySetInnerHTML={{ __html: slide.title }}
-            />
-            <p className="text-[17px] text-[var(--taupe)] max-w-[380px] mb-12 leading-[1.75]" style={{ fontFamily: 'var(--ff-body)' }}>
-              {slide.description}
-            </p>
-            <Link href="#projects" className="inline-flex items-center gap-3 text-[13px] font-semibold tracking-[1.5px] uppercase text-[var(--terra)] pb-1 border-b-[1.5px] border-[var(--terra)] w-fit transition-all hover:gap-5" style={{ fontFamily: 'var(--ff-sub)' }}>
-              Explore Our Work →
-            </Link>
-          </div>
-        </div>
-      ))}
+      <AnimatePresence mode="wait">
+        {heroSlides.map((slide, idx) => (
+          idx === currentSlide && (
+            <motion.div
+              key={slide.id}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+              className="absolute inset-0 z-10"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <motion.img
+                initial={{ scale: 1.1 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 6, ease: "linear" }}
+                src={slide.image}
+                alt="Hero background"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/40"></div>
+              
+              <div className="absolute inset-0 flex flex-col justify-center px-8 md:px-16 lg:px-[60px] z-20 text-white">
+                {/* Subtitle with Block per Word */}
+                <div className="mb-6 flex items-center gap-[14px]">
+                  <span className="w-[30px] md:w-[40px] h-px bg-[var(--taupe)]"></span>
+                  <p className="text-[12px] md:text-[14px] tracking-[4px] uppercase text-[var(--taupe)] flex flex-wrap gap-x-[12px]" style={{ fontFamily: 'var(--ff-mono)' }}>
+                    {slide.subtitle.split(' ').map((word, wIdx) => (
+                      <span key={wIdx} className="relative overflow-hidden inline-block px-1 -mx-1">
+                        <motion.div
+                          initial={{ left: 0, width: "0%" }}
+                          animate={{ 
+                            width: ["0%", "100%", "100%", "0%"],
+                            left: ["0%", "0%", "0%", "100%"]
+                          }}
+                          transition={{ 
+                            times: [0, 0.4, 0.6, 1],
+                            duration: 1, 
+                            ease: [0.77, 0, 0.175, 1],
+                            delay: 0.2 + (wIdx * 0.1)
+                          }}
+                          className="absolute inset-y-0 bg-white z-20"
+                        />
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ delay: 0.2 + (wIdx * 0.1) + 0.6 }}
+                          className="relative z-10"
+                        >
+                          {word}
+                        </motion.span>
+                      </span>
+                    ))}
+                  </p>
+                </div>
+
+                {/* Title with Block per Word */}
+                <h1 
+                  className="text-[clamp(44px,8vw,120px)] font-normal leading-[1.1] tracking-[-1px] max-w-[1000px] flex flex-wrap gap-x-[0.25em]" 
+                  style={{ fontFamily: 'var(--ff-display)' }}
+                >
+                  {slide.title.split(/<br\/>| /).map((part, pIdx) => {
+                    // Check if it's an <em> tag
+                    const isEm = part.startsWith('<em>') || part.endsWith('</em>');
+                    const cleanPart = part.replace(/<\/?em>/g, '');
+                    
+                    return (
+                      <span key={pIdx} className="relative overflow-hidden inline-block py-1">
+                        <motion.div
+                          initial={{ left: 0, width: "0%" }}
+                          animate={{ 
+                            width: ["0%", "100%", "100%", "0%"],
+                            left: ["0%", "0%", "0%", "100%"]
+                          }}
+                          transition={{ 
+                            times: [0, 0.4, 0.6, 1],
+                            duration: 1.2, 
+                            ease: [0.77, 0, 0.175, 1],
+                            delay: 0.5 + (pIdx * 0.15)
+                          }}
+                          className="absolute inset-y-0 bg-white z-20"
+                        />
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ delay: 0.5 + (pIdx * 0.15) + 0.8 }}
+                          className={`relative z-10 inline-block ${isEm ? 'italic text-[var(--terra)]' : ''}`}
+                        >
+                          {cleanPart}
+                        </motion.span>
+                        {/* Add line break if the original title had <br/> here */}
+                        {slide.title.includes(`${part}<br/>`) && <div className="w-full h-0" />}
+                      </span>
+                    );
+                  })}
+                </h1>
+              </div>
+            </motion.div>
+          )
+        ))}
+      </AnimatePresence>
 
       {/* Thumbnails */}
-      <div className="absolute bottom-0 right-0 z-40 bg-white p-6 md:p-8 flex items-center gap-5 md:gap-6">
+      <div className="absolute bottom-0 right-0 z-40 bg-white p-4 md:p-8 flex items-center gap-4 md:gap-6">
         {heroSlides.map((slide, idx) => (
           <div
             key={slide.id}
@@ -92,9 +155,12 @@ export function HeroSection() {
             className="relative cursor-pointer flex items-center justify-center group"
           >
             {idx === currentSlide && (
-              <div className="absolute inset-[-6px] border-[3px] border-[#F5B82A]"></div>
+              <motion.div 
+                layoutId="activeThumb"
+                className="absolute inset-[-6px] border-[3px] border-[#F5B82A]"
+              />
             )}
-            <div className={`w-16 h-16 md:w-20 md:h-20 relative transition-opacity duration-300 ${idx === currentSlide ? 'opacity-100' : 'opacity-70 group-hover:opacity-100'}`}>
+            <div className={`w-12 h-12 md:w-20 md:h-20 relative transition-opacity duration-300 ${idx === currentSlide ? 'opacity-100' : 'opacity-70 group-hover:opacity-100'}`}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={slide.image} alt={`Thumbnail ${idx + 1}`} className="w-full h-full object-cover" />
             </div>
@@ -104,11 +170,13 @@ export function HeroSection() {
 
       {/* Progress Bar */}
       <div className="absolute bottom-0 left-0 w-full h-1 bg-white/10 z-30">
-        <div 
+        <motion.div 
           key={currentSlide} 
-          className="h-full bg-[var(--amber)] animate-progress"
-          style={{ animationDuration: `${slideDuration}ms` }}
-        ></div>
+          initial={{ width: "0%" }}
+          animate={{ width: "100%" }}
+          transition={{ duration: slideDuration / 1000, ease: "linear" }}
+          className="h-full bg-[#F5B82A]"
+        />
       </div>
     </section>
   );

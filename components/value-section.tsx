@@ -5,16 +5,16 @@ export function ValueSection() {
     <section id="value" className="py-24 bg-[#fafafa]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
-          
+
           {/* Column 1: Text & Image */}
           <div className="flex flex-col gap-6">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 group cursor-default">
               <h2 className="text-4xl md:text-5xl font-light text-gray-900 tracking-tight">
                 <span className="text-[#F5B82A]">OUR</span> <span className="font-bold">VALUE</span>
               </h2>
-              <div className="flex flex-col gap-1.5">
-                <div className="w-16 h-[1px] bg-[#F5B82A]"></div>
-                <div className="w-8 h-[1px] bg-[#F5B82A]"></div>
+              <div className="flex flex-col gap-1.5 items-end w-12">
+                <div className="w-12 h-[1px] bg-[#F5B82A] transition-all duration-500 ease-in-out group-hover:w-8"></div>
+                <div className="w-6 h-[1px] bg-[#F5B82A] transition-all duration-500 ease-in-out group-hover:w-10"></div>
               </div>
             </div>
             <h3 className="text-xl font-bold text-gray-900">Our Core Values</h3>
@@ -63,8 +63,8 @@ export function ValueSection() {
                     <span className="text-gray-400 font-normal">{skill.percent}%</span>
                   </div>
                   <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
-                    <div 
-                      className="h-full bg-[#00A3FF] rounded-full" 
+                    <div
+                      className="h-full bg-[#00A3FF] rounded-full"
                       style={{ width: `${skill.percent}%` }}
                     ></div>
                   </div>
