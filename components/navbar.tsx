@@ -19,10 +19,7 @@ export function Navbar() {
   return (
     <nav
       id="navbar"
-      className={`fixed top-0 left-0 right-0 z-100 flex items-center justify-between transition-all duration-400 px-[60px] ${isScrolled
-        ? 'bg-bg-base/90 backdrop-blur-md py-[8px] border-b border-border-silver/20'
-        : 'bg-transparent py-[18px]'
-        }`}
+      className="fixed top-0 left-0 right-0 z-100 flex items-center justify-between bg-bg-base border-b border-border-silver/20 py-[12px] px-[60px] transition-all duration-300 shadow-sm"
     >
       <Link href="#" className="nav-logo text-[22px] font-bold tracking-[3px] text-primary-text uppercase">
         <div className="relative w-28 h-12">

@@ -180,4 +180,41 @@ kbd {
   .hero-left h1 { animation-delay: .3s; }
   .hero-left p:nth-child(3) { animation-delay: .5s; }
   .hero-left a { animation-delay: .65s; }
+
+  @keyframes progress {
+    from { width: 0; }
+    to   { width: 100%; }
+  }
+
+  @keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-15px); }
+  }
+
+  .animate-progress {
+    animation: progress linear forwards;
+  }
+
+  .animate-bounce-slow {
+    animation: bounce-slow 4s ease-in-out infinite;
+  }
+
+  .text-3d {
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.05);
+  }
+
+  .project-thumb {
+    position: fixed;
+    width: 320px;
+    height: 220px;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .project-thumb.show {
+    opacity: 1;
+  }
 }
