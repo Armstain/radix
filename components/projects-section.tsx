@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useState, useRef } from 'react';
 import Link from 'next/link';
 
@@ -34,13 +35,15 @@ export function ProjectsSection() {
 
   return (
     <section id="projects" className="py-24 bg-white">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img 
+      <Image 
         id="projectThumb" 
         className={`project-thumb ${showThumb ? 'show' : ''}`} 
         ref={thumbRef} 
-        src={thumbSrc} 
+        src={thumbSrc || projects[0].img} 
         alt="" 
+        width={320}
+        height={220}
+        unoptimized
       />
 
       <div className="projects-header reveal max-w-7xl mx-auto px-6 mb-12 flex justify-between items-end">

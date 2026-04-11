@@ -11,12 +11,14 @@ import { FeaturedProjectSection } from '@/components/featured-project-section';
 import { ProcessSection } from '@/components/process-section';
 import { TestimonialsSection } from '@/components/testimonials-section';
 import { MissionSection } from '@/components/mission-section';
+import { HiringBanner } from '@/components/hiring-banner';
 import { Footer } from '@/components/footer';
 
 export default function Home() {
   return (
     <>
       <CustomCursor />
+      <HiringBanner />
       <Navbar />
 
       <HeroSection />
@@ -26,10 +28,10 @@ export default function Home() {
       <ValueSection />
       <ServicesSection />
 
-      {/* <ProcessSection />
+      {/* <ProcessSection /> */}
       <ProjectsSection />
-      <FeaturedProjectSection />
-      <TestimonialsSection /> */}
+      {/* <FeaturedProjectSection /> */}
+      <TestimonialsSection />
       <MissionSection />
 
       <Footer />

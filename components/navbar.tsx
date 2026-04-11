@@ -13,13 +13,14 @@ export function Navbar() {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
+    document.documentElement.style.setProperty('--nav-height', '72px');
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
   return (
     <nav
       id="navbar"
-      className="fixed top-0 left-0 right-0 z-100 flex items-center justify-between bg-bg-base border-b border-border-silver/20 py-[12px] px-[60px] transition-all duration-300 shadow-sm"
+      className="sticky top-0 left-0 right-0 z-[100] flex items-center justify-between bg-bg-base border-b border-border-silver/20 py-[12px] px-[60px] transition-all duration-300 shadow-sm"
     >
       <Link href="#" className="nav-logo text-[22px] font-bold tracking-[3px] text-primary-text uppercase">
         <div className="relative w-28 h-12">
@@ -35,7 +36,7 @@ export function Navbar() {
       </Link>
       <ul className="flex items-center gap-[44px] list-none">
         <li className="nav-links"><Link href="#projects" className="text-[11px] font-semibold tracking-[2px] uppercase text-primary-text hover:text-brand-cobalt transition-colors duration-300">Work</Link></li>
-        <li className="nav-links"><Link href="#philosophy" className="text-[11px] font-semibold tracking-[2px] uppercase text-primary-text hover:text-brand-cobalt transition-colors duration-300">Studio</Link></li>
+        <li className="nav-links"><Link href="#about" className="text-[11px] font-semibold tracking-[2px] uppercase text-primary-text hover:text-brand-cobalt transition-colors duration-300">Studio</Link></li>
         <li className="nav-links"><Link href="#services" className="text-[11px] font-semibold tracking-[2px] uppercase text-primary-text hover:text-brand-cobalt transition-colors duration-300">Services</Link></li>
         <li className="nav-links"><Link href="#testimonials" className="text-[11px] font-semibold tracking-[2px] uppercase text-primary-text hover:text-brand-cobalt transition-colors duration-300">Clients</Link></li>
       </ul>

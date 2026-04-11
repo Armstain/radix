@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 export function AboutSection() {
   return (
     <section id="about" className="relative bg-[#111111] py-24 overflow-hidden">
@@ -36,12 +38,12 @@ export function AboutSection() {
 
         {/* Image Wrapper */}
         <div className="relative z-20 w-[90%] md:w-[80%] ml-auto">
-          <div className="aspect-[16/9] w-full overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+          <div className="aspect-[16/9] w-full overflow-hidden relative">
+            <Image
               src="https://images.unsplash.com/photo-1541888086425-d81bb19240f5?w=1200&q=80"
               alt="About Company"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
             />
           </div>
           {/* Pagination */}

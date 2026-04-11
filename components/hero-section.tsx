@@ -2,6 +2,9 @@
 
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
+
+const MotionImage = motion(Image);
 
 const heroSlides = [
   {
@@ -42,7 +45,11 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section id="hero" className="relative h-screen w-full overflow-hidden bg-[var(--dark)]">
+    <section 
+      id="hero" 
+      className="relative w-full overflow-hidden bg-[var(--dark)] transition-[height] duration-500 ease-in-out"
+      style={{ height: 'calc(100vh - var(--banner-height, 0px) - var(--nav-height, 0px))' }}
+    >
       {/* Slides */}
       <AnimatePresence mode="wait">
         {heroSlides.map((slide, idx) => (
@@ -55,14 +62,15 @@ export function HeroSection() {
               transition={{ duration: 0.8, ease: "easeInOut" }}
               className="absolute inset-0 z-10"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <motion.img
+              <MotionImage
                 initial={{ scale: 1.1 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 6, ease: "linear" }}
                 src={slide.image}
                 alt="Hero background"
-                className="absolute inset-0 w-full h-full object-cover"
+                fill
+                priority
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-black/40"></div>
               
@@ -73,7 +81,7 @@ export function HeroSection() {
                   <p className="text-[12px] md:text-[14px] tracking-[4px] uppercase text-[var(--taupe)] flex flex-wrap gap-x-[12px]" style={{ fontFamily: 'var(--ff-mono)' }}>
                     {slide.subtitle.split(' ').map((word, wIdx) => (
                       <span key={wIdx} className="relative overflow-hidden inline-block px-1 -mx-1">
-                        <motion.div
+                        <motion.span
                           initial={{ left: 0, width: "0%" }}
                           animate={{ 
                             width: ["0%", "100%", "100%", "0%"],
@@ -112,7 +120,7 @@ export function HeroSection() {
                     
                     return (
                       <span key={pIdx} className="relative overflow-hidden inline-block py-1">
-                        <motion.div
+                        <motion.span
                           initial={{ left: 0, width: "0%" }}
                           animate={{ 
                             width: ["0%", "100%", "100%", "0%"],
@@ -135,7 +143,7 @@ export function HeroSection() {
                           {cleanPart}
                         </motion.span>
                         {/* Add line break if the original title had <br/> here */}
-                        {slide.title.includes(`${part}<br/>`) && <div className="w-full h-0" />}
+                        {slide.title.includes(`${part}<br/>`) && <span className="block w-full h-0" />}
                       </span>
                     );
                   })}
@@ -161,8 +169,12 @@ export function HeroSection() {
               />
             )}
             <div className={`w-12 h-12 md:w-20 md:h-20 relative transition-opacity duration-300 ${idx === currentSlide ? 'opacity-100' : 'opacity-70 group-hover:opacity-100'}`}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={slide.image} alt={`Thumbnail ${idx + 1}`} className="w-full h-full object-cover" />
+              <Image 
+                src={slide.image} 
+                alt={`Thumbnail ${idx + 1}`} 
+                fill 
+                className="object-cover" 
+              />
             </div>
           </div>
         ))}

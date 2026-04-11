@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 export function ValueSection() {
   return (
     <section id="value" className="py-24 bg-[#fafafa]">
@@ -22,8 +24,12 @@ export function ValueSection() {
               At RADIX Interior & Construction, our core values are the foundation of everything we do. They guide our team, inform our decisions, and ensure we consistently deliver outstanding results for our clients.
             </p>
             <div className="relative mt-4 aspect-video w-full overflow-hidden bg-gray-900 group">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Our Value" className="w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-105" />
+              <Image 
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" 
+                alt="Our Value" 
+                fill
+                className="object-cover opacity-60 transition-transform duration-700 group-hover:scale-105" 
+              />
               {/* Corner brackets */}
               <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-white"></div>
               <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-white"></div>
