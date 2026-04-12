@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { FooterLogo } from './footer-logo';
 import { Send, ChevronUp } from 'lucide-react';
+import { siFacebook } from 'simple-icons';
 
 export function Footer() {
   const scrollToTop = () => {
@@ -45,17 +46,10 @@ export function Footer() {
             Radix Constructions & Interiors delivers modern construction and premium interior solutions with a focus on quality, durability, and smart design. We handle residential, commercial, and industrial projects from planning to finishing with reliable execution and timely delivery.
           </p>
           <div className="flex gap-2 mt-6">
-            <Link href="#" aria-label="Facebook" className="w-8 h-8 rounded-sm bg-[#1A1A1A] flex items-center justify-center text-white hover:bg-brand-yellow hover:text-black transition-all">
-              {/* <Facebook size={14} /> */}
-            </Link>
-            <Link href="#" aria-label="Twitter" className="w-8 h-8 rounded-sm bg-[#1A1A1A] flex items-center justify-center text-white hover:bg-brand-yellow hover:text-black transition-all">
-              {/* <Twitter size={14} /> */}
-            </Link>
-            <Link href="#" aria-label="Youtube" className="w-8 h-8 rounded-sm bg-[#1A1A1A] flex items-center justify-center text-white hover:bg-brand-yellow hover:text-black transition-all">
-              {/* <Youtube size={14} /> */}
-            </Link>
-            <Link href="#" aria-label="Instagram" className="w-8 h-8 rounded-sm bg-[#1A1A1A] flex items-center justify-center text-white hover:bg-brand-yellow hover:text-black transition-all">
-              {/* <Instagram size={14} /> */}
+            <Link href="https://www.facebook.com/radix.interior.construction" aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-sm bg-[#1A1A1A] flex items-center justify-center text-white hover:bg-brand-yellow hover:text-black transition-all">
+              <svg role="img" viewBox="0 0 24 24" width={14} height={14} fill="currentColor" aria-hidden="true">
+                <path d={siFacebook.path} />
+              </svg>
             </Link>
           </div>
         </div>
@@ -69,12 +63,11 @@ export function Footer() {
               Dhaka 1229
             </address>
             <div className="flex flex-col gap-2">
-              <a href="mailto:radix_06@yahoo.com" className="hover:text-brand-yellow transition-colors leading-relaxed">radix_06@yahoo.com</a>
               <a href="mailto:radixintext@gmail.com" className="hover:text-brand-yellow transition-colors leading-relaxed">radixintext@gmail.com</a>
+              <a href="mailto:radixinterior20@gmail.com" className="hover:text-brand-yellow transition-colors leading-relaxed">radixinterior20@gmail.com</a>
             </div>
             <div className="flex flex-col gap-2">
-              <a href="tel:01711626196" className="hover:text-brand-yellow transition-colors leading-relaxed">01711626196</a>
-              <a href="tel:01728347431" className="hover:text-brand-yellow transition-colors leading-relaxed">01728347431</a>
+              <a href="tel:+8801728347431" className="hover:text-brand-yellow transition-colors leading-relaxed">+880 1728-347431</a>
             </div>
           </div>
         </div>
