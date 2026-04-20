@@ -66,7 +66,7 @@ export function Footer() {
           <div className="space-y-6 text-secondary-text text-sm">
             <address className="not-italic leading-relaxed">
               KA-80 Joar Shahara, Bazar Road,<br />
-              Dhaka 1229
+              Dhaka 1229, Bangladesh
             </address>
             <div className="flex flex-col gap-2">
               <a href="mailto:radix_06@yahoo.com" className="hover:text-brand-yellow transition-colors leading-relaxed">radix_06@yahoo.com</a>
@@ -81,38 +81,32 @@ export function Footer() {
 
         {/* Services / Links */}
         <div className="space-y-6">
-          <h4 className="text-lg font-bold uppercase tracking-wider text-white mb-6">Interior Design</h4>
+          <h4 className="text-lg font-bold uppercase tracking-wider text-white mb-6">Our Services</h4>
           <ul className="space-y-4 text-sm font-bold uppercase tracking-tight">
-            <li><Link href="#" className="hover:text-brand-yellow transition-colors">Exterior Design</Link></li>
-            <li><Link href="#" className="hover:text-brand-yellow transition-colors">Custom Furniture</Link></li>
-            <li><Link href="#" className="hover:text-brand-yellow transition-colors">Project Analysis</Link></li>
-            <li><Link href="#" className="hover:text-brand-yellow transition-colors">Renovation</Link></li>
-            <li className="pt-2"><Link href="#" className="text-secondary-text font-normal normal-case tracking-normal hover:text-brand-yellow transition-colors">Home Interior Design</Link></li>
+            <li><Link href="#services" className="hover:text-brand-yellow transition-colors">Architectural Consultancy</Link></li>
+            <li><Link href="#services" className="hover:text-brand-yellow transition-colors">Interior Design</Link></li>
+            <li><Link href="#services" className="hover:text-brand-yellow transition-colors">Civil Construction</Link></li>
+            <li><Link href="#services" className="hover:text-brand-yellow transition-colors">Furniture Design</Link></li>
+            <li><Link href="#support-services" className="hover:text-brand-yellow transition-colors">Supporting Services</Link></li>
           </ul>
         </div>
 
-        {/* Recent Posts */}
+        {/* Branding & Social */}
         <div className="space-y-6">
-          <h4 className="text-lg font-bold uppercase tracking-wider text-white mb-6">Recent Post</h4>
-          <div className="space-y-8">
-            <div className="group">
-              <span className="text-xs text-brand-yellow block mb-2">2025-12-04</span>
-              <Link href="#" className="text-[13px] leading-snug group-hover:text-brand-yellow transition-colors line-clamp-2 uppercase font-bold tracking-tight">
-                A to Z Home Construction Timeline — Step-by-step
-              </Link>
-            </div>
-            <div className="group">
-              <span className="text-xs text-brand-yellow block mb-2">2025-12-12</span>
-              <Link href="#" className="text-[13px] leading-snug group-hover:text-brand-yellow transition-colors line-clamp-2 uppercase font-bold tracking-tight">
-                Top Modern Interior Design Trends for 2025
-              </Link>
-            </div>
-            <div className="group">
-              <span className="text-xs text-brand-yellow block mb-2">2025-12-12</span>
-              <Link href="#" className="text-[13px] leading-snug group-hover:text-brand-yellow transition-colors line-clamp-2 uppercase font-bold tracking-tight">
-                Why Professional Interior Design Matters More Than Ever
-              </Link>
-            </div>
+          <h4 className="text-lg font-bold uppercase tracking-wider text-white mb-6">Connect</h4>
+          <p className="text-secondary-text text-sm leading-relaxed max-w-xs">
+            Follow us on social media to see our latest projects and design inspirations.
+          </p>
+          <div className="flex gap-2 mt-6">
+            <Link href="#" aria-label="Facebook" className="w-10 h-10 rounded-sm bg-[#1A1A1A] flex items-center justify-center text-white hover:bg-brand-yellow hover:text-black transition-all">
+              FB
+            </Link>
+            <Link href="#" aria-label="Instagram" className="w-10 h-10 rounded-sm bg-[#1A1A1A] flex items-center justify-center text-white hover:bg-brand-yellow hover:text-black transition-all">
+              IG
+            </Link>
+            <Link href="#" aria-label="LinkedIn" className="w-10 h-10 rounded-sm bg-[#1A1A1A] flex items-center justify-center text-white hover:bg-brand-yellow hover:text-black transition-all">
+              IN
+            </Link>
           </div>
         </div>
       </div>

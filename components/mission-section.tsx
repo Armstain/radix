@@ -63,21 +63,14 @@ export function MissionSection() {
           {/* Left Column - Mission & Vision */}
           <div className="bg-white p-12 md:p-16 flex flex-col justify-center">
             <h3 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">Our Mission</h3>
-            <p className="text-gray-600 leading-relaxed mb-6">
-              At RADIX Interior & Construction, our core values shape everything we do—guiding our decisions, defining our culture, and driving exceptional outcomes for every client. We are committed to Excellence in architectural consultancy and engineering excellence, known for transformative spaces that blend functionality with timeless design.
+            <p className="text-gray-600 leading-relaxed mb-12">
+              At RADIX Interior & Construction, our core values shape everything we do—guiding our decisions, defining our culture, and driving exceptional outcomes for every client. We are committed to design quality, professional execution, and client satisfaction across all sectors.
             </p>
-            <div className="flex justify-end mb-12">
-              <Link href="#" className="text-sm font-bold text-gray-900 hover:text-[#F5B82A] transition-colors flex items-center gap-1">
-                Read More <span className="text-lg leading-none">›</span>
-              </Link>
-            </div>
 
             <h3 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">Vision</h3>
-            <div className="flex justify-end">
-              <Link href="#" className="text-sm font-bold text-gray-900 hover:text-[#F5B82A] transition-colors flex items-center gap-1">
-                Read More <span className="text-lg leading-none">›</span>
-              </Link>
-            </div>
+            <p className="text-gray-600 leading-relaxed">
+              Our creative and skilled team focuses on detail, functionality, and transforming client ideas into reality. We aim to build a legacy of excellence by delivering innovative solutions and reliable service globally.
+            </p>
           </div>
 
           {/* Right Column - Contact Form */}

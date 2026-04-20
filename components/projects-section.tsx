@@ -5,11 +5,11 @@ import { useState, useRef } from 'react';
 import Link from 'next/link';
 
 const projects = [
-  { num: '01', name: 'Impress Newtex', loc: 'Mirzapur', img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=640&q=80&fit=crop' },
-  { num: '02', name: 'Incepta Head Office', loc: 'Tejgaon, Dhaka', img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=640&q=80&fit=crop' },
-  { num: '03', name: 'Sonia Garments', loc: 'Ashulia', img: 'https://images.unsplash.com/photo-1556761175-5973dc0f32b7?w=640&q=80&fit=crop' },
-  { num: '04', name: 'Muktadir Residence', loc: 'Incepta Pharma', img: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=640&q=80&fit=crop' },
-  { num: '05', name: 'Single Family House', loc: 'Noakhali', img: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?w=640&q=80&fit=crop' },
+  { num: '01', name: 'Impress Newtex', loc: 'Mirzapur', img: '/assets/impress_newtex/impress_newtex.jpg' },
+  { num: '02', name: 'Incepta Head Office', loc: 'Tejgaon, Dhaka', img: '/assets/head_office_tejgaon/6c69894a-2696-413f-bbac-758d0aaff071.jpg' },
+  { num: '03', name: 'Sonia Garments', loc: 'Ashulia', img: '/assets/sonia_garments/d57f62f6-c8a4-401e-9876-b66e73ba7c2c.jpg' },
+  { num: '04', name: 'Muktadir Residence', loc: 'Incepta Pharma', img: '/assets/muktadie_incepta/75ade89e-bd9f-4eea-9162-82b5bb3f6d8a.jpg' },
+  { num: '05', name: 'Single Family House', loc: 'Noakhali', img: '/assets/family_house_noakhali/ebe86f1f-8ef2-4029-b531-4f1cf1f3dd3d.jpg' },
 ];
 
 export function ProjectsSection() {

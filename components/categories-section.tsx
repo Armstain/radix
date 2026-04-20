@@ -8,12 +8,12 @@ export function CategoriesSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            { id: 1, title: 'Dining', image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80' },
-            { id: 2, title: 'Residential', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80' },
-            { id: 3, title: 'Commercial', image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80' },
-            { id: 4, title: 'Living Room', image: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80' },
-            { id: 5, title: 'Bedroom', image: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80' },
-            { id: 6, title: 'Interior', image: 'https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&q=80' },
+            { id: 1, title: 'Dining', image: '/assets/kfc_gulshan/3986b67e-88d6-4896-8570-1d47f922fce6.jpg' },
+            { id: 2, title: 'Residential', image: '/assets/family_house_noakhali/28bc0e89-cf1a-478e-a784-e2d2002cf9b9.jpg' },
+            { id: 3, title: 'Commercial', image: '/assets/incepta_factory/343a6ed0-0c85-479f-9623-76a04b495453.jpg' },
+            { id: 4, title: 'Living Room', image: '/assets/muktadie_incepta/21a317a0-eeef-434c-a822-b947e97d87e2.jpg' },
+            { id: 5, title: 'Bedroom', image: '/assets/fakhruddin_textile/6868edc1-ed84-4d92-8410-ff6e2a358cd6.jpg' },
+            { id: 6, title: 'Interior', image: '/assets/fakhruddin_textile/e69176cd-7a36-4fe1-8d46-b755d87c9d9b.jpg' },
           ].map((cat) => (
             <div key={cat.id} className="group relative w-full aspect-[4/3] overflow-hidden cursor-pointer">
               <Image width={200} height={100} src={cat.image} alt={cat.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />

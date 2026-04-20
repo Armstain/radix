@@ -21,11 +21,11 @@ export function ValueSection() {
             </div>
             <h3 className="text-xl font-bold text-gray-900">Our Core Values</h3>
             <p className="text-gray-600 leading-relaxed text-sm">
-              At RADIX Interior & Construction, our core values are the foundation of everything we do. They guide our team, inform our decisions, and ensure we consistently deliver outstanding results for our clients.
+              We are a trusted and reputable construction & interior company in Bangladesh with a strong track record of delivering projects professionally using quality materials and dependable support. Our creative and skilled team focuses on detail, functionality, and transforming client ideas into reality.
             </p>
             <div className="relative mt-4 aspect-video w-full overflow-hidden bg-gray-900 group">
               <Image 
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" 
+                src="/assets/incepta_factory/93e98b69-ad5e-48ea-b927-8fde0565db19.jpg" 
                 alt="Our Value" 
                 fill
                 className="object-cover opacity-60 transition-transform duration-700 group-hover:scale-105" 
@@ -35,13 +35,13 @@ export function ValueSection() {
               <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-white"></div>
             </div>
           </div>
-
+ 
           {/* Column 2: Stats Boxes */}
           <div className="flex flex-col gap-4">
             {[
-              { number: '200+', label: 'Customers' },
+              { number: '70+', label: 'Clients' },
               { number: '100+', label: 'Projects' },
-              { number: '26+', label: 'Years' },
+              { number: '26+', label: 'Years Experience' },
             ].map((stat, idx) => (
               <div key={idx} className="bg-[#111111] py-10 flex flex-col items-center justify-center gap-2 transition-transform hover:-translate-y-1">
                 <span className="text-4xl font-black text-[#F5B82A]">{stat.number}</span>

@@ -10,7 +10,7 @@ export function FeaturedProjectSection() {
         <div className="featured-img-wrap relative">
           <Image
             className="featured-img object-cover"
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=85&fit=crop"
+            src="/assets/impress_newtex/e2c31473-37a5-4da0-828f-7e971f0dac5e.jpg"
             alt="Impress Newtex"
             fill
           />

@@ -9,25 +9,25 @@ const MotionImage = motion(Image);
 const heroSlides = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=85&fit=crop',
+    image: '/assets/head_office_tejgaon/494ae9d1-7d9f-4d7b-ae71-1c81208b5f9c.jpg',
     title: 'We Shape<br/><em>Living Space.</em>',
-    subtitle: 'Interior & Construction · Dhaka',
+    subtitle: 'Business Portfolio · Interior & Construction',
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=85&fit=crop',
+    image: '/assets/family_house_noakhali/58ffee97-c6d0-4d80-89c1-dd30935a5303.jpg',
     title: 'Architectural<br/><em>Excellence.</em>',
     subtitle: 'Planning & Designing',
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=1920&q=85&fit=crop',
+    image: '/assets/fakhruddin_textile/ceded936-535f-47a3-ab64-e7eb44127ce1.jpg',
     title: 'Interior Design<br/><em>& Decoration.</em>',
     subtitle: 'Crafting Environments',
   },
   {
     id: 4,
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=85&fit=crop',
+    image: '/assets/incepta_factory/ea897df4-d201-41a8-a92a-97be1aa9f33b.jpg',
     title: 'Large-Scale<br/><em>Construction.</em>',
     subtitle: 'Civil Engineering',
   }
