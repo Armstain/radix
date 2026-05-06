@@ -45,7 +45,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="services" className="relative bg-[#111111] py-24 overflow-hidden border-t border-[#222222]">
+    <section id="services" className="relative bg-[#111111] pt-20 pb-16 overflow-hidden border-t border-[#222222]">
       <div className="container mx-auto px-6 relative z-20">
         {/* Header */}
         <div className="mb-16">

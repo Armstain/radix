@@ -40,7 +40,7 @@ export function MissionSection() {
   };
 
   return (
-    <section id="cta" className="relative py-24 bg-[#fafafa] overflow-hidden">
+    <section id="cta" className="relative py-16 bg-[#fafafa] overflow-hidden">
       {/* ... Title Logic Remains Same ... */}
       <div className="flex items-center justify-center gap-4 mb-20 relative z-20 group cursor-default">
         <div className="flex flex-col gap-1.5 items-start w-12">
@@ -57,7 +57,7 @@ export function MissionSection() {
       </div>
 
       {/* Content Grid */}
-      <div className="relative max-w-6xl mx-auto px-6 z-20">
+      <div className="relative container mx-auto px-6 z-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
           
           {/* Left Column - Mission & Vision */}

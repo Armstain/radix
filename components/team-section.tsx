@@ -20,8 +20,8 @@ const team = [
 
 export function TeamSection() {
   return (
-    <section id="team" className="py-24 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="team" className="py-16 bg-white overflow-hidden">
+      <div className="container mx-auto px-6">
         {/* Header */}
         <div className="flex items-center gap-4 mb-20 group cursor-default">
           <h2 className="text-3xl md:text-4xl tracking-widest font-light text-gray-900">
@@ -49,6 +49,7 @@ export function TeamSection() {
                   src={member.image}
                   alt={member.name}
                   fill
+                  sizes="(max-width: 768px) 192px, 256px"
                   className="object-cover"
                 />
                 <div className="absolute inset-0 border-[10px] border-white/20 group-hover:border-white/10 transition-colors"></div>

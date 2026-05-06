@@ -1,10 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import Image from 'next/image';
-
-const MotionImage = motion(Image);
 
 const heroSlides = [
   {
@@ -21,13 +19,25 @@ const heroSlides = [
   },
   {
     id: 3,
-    image: '/assets/fakhruddin_textile/ceded936-535f-47a3-ab64-e7eb44127ce1.jpg',
+    image: '/assets/MAHEEN LABEL/INTERIOR/ML - INTERIOR WORK/Picsart_26-05-04_10-20-17-591.jpg',
+    title: 'Corporate Office<br/><em>Interiors.</em>',
+    subtitle: 'Crafting Environments · Maheen Label',
+  },
+  {
+    id: 4,
+    image: '/assets/MAHEEN LABEL/INTERIOR/ML - INTERIOR WORK/Picsart_26-05-04_10-21-38-568.jpg',
+    title: 'Modern Executive<br/><em>Workspace.</em>',
+    subtitle: 'Office Design · Radix Elite',
+  },
+  {
+    id: 5,
+    image: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=1920&q=85&fit=crop',
     title: 'Interior Design<br/><em>& Decoration.</em>',
     subtitle: 'Crafting Environments',
   },
   {
-    id: 4,
-    image: '/assets/incepta_factory/ea897df4-d201-41a8-a92a-97be1aa9f33b.jpg',
+    id: 6,
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=85&fit=crop',
     title: 'Large-Scale<br/><em>Construction.</em>',
     subtitle: 'Civil Engineering',
   }
@@ -62,16 +72,21 @@ export function HeroSection() {
               transition={{ duration: 0.8, ease: "easeInOut" }}
               className="absolute inset-0 z-10"
             >
-              <MotionImage
+              <motion.div
                 initial={{ scale: 1.1 }}
                 animate={{ scale: 1 }}
                 transition={{ duration: 6, ease: "linear" }}
-                src={slide.image}
-                alt="Hero background"
-                fill
-                priority
-                className="object-cover"
-              />
+                className="absolute inset-0"
+              >
+                <Image
+                  src={slide.image}
+                  alt="Hero background"
+                  fill
+                  priority
+                  sizes="100vw"
+                  className="object-cover"
+                />
+              </motion.div>
               <div className="absolute inset-0 bg-black/40"></div>
               
               <div className="absolute inset-0 flex flex-col justify-center px-8 md:px-16 lg:px-[60px] z-20 text-white">
@@ -173,6 +188,7 @@ export function HeroSection() {
                 src={slide.image} 
                 alt={`Thumbnail ${idx + 1}`} 
                 fill 
+                sizes="(max-width: 768px) 48px, 80px"
                 className="object-cover" 
               />
             </div>

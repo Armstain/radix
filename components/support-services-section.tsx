@@ -59,8 +59,8 @@ export function SupportServicesSection() {
   const [activeTab, setActiveTab] = useState(categories[0].id);
 
   return (
-    <section id="support-services" className="py-24 bg-[#fafafa]">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="support-services" className="py-16 bg-[#fafafa]">
+      <div className="container mx-auto px-6">
         {/* Header */}
         <div className="mb-16">
           <div className="flex items-center gap-4 mb-4 group cursor-default max-w-fit">

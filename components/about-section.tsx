@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export function AboutSection() {
   return (
-    <section id="about" className="relative bg-[#111111] py-24 overflow-hidden">
+    <section id="about" className="relative bg-[#111111] pt-20 pb-16 overflow-hidden">
       {/* Title */}
       <div className="flex items-center justify-center gap-4 mb-20 relative z-20 group cursor-default">
         {/* left side lines */}
@@ -27,7 +27,7 @@ export function AboutSection() {
       </div>
 
       {/* Content */}
-      <div className="relative max-w-7xl mx-auto px-6 py-12 mb-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="relative container mx-auto px-6 py-12 mb-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Text Column */}
         <div className="relative z-20 space-y-8">
           <p className="text-gray-400 font-mono text-sm tracking-widest uppercase">Established 2000</p>
@@ -63,6 +63,7 @@ export function AboutSection() {
                 src="/assets/head_office_tejgaon/a77491c4-8269-4466-97ab-47140bdba71f.jpg"
                 alt="About Company"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>

@@ -34,7 +34,7 @@ export function ProjectsSection() {
   };
 
   return (
-    <section id="projects" className="py-24 bg-white">
+    <section id="projects" className="py-16 bg-white">
       <Image 
         id="projectThumb" 
         className={`project-thumb ${showThumb ? 'show' : ''}`} 
@@ -46,7 +46,7 @@ export function ProjectsSection() {
         unoptimized
       />
 
-      <div className="projects-header reveal max-w-7xl mx-auto px-6 mb-12 flex justify-between items-end">
+      <div className="projects-header reveal container mx-auto px-6 mb-12 flex justify-between items-end">
         <div>
           <p className="section-label">Selected Work</p>
           <h2 className="section-title">Our Projects</h2>
@@ -62,7 +62,7 @@ export function ProjectsSection() {
             onMouseEnter={() => handleMouseEnter(project.img)}
             onMouseLeave={handleMouseLeave}
           >
-            <div className="max-w-7xl mx-auto flex justify-between items-center w-full">
+            <div className="container mx-auto px-6 flex justify-between items-center w-full">
               <span className="project-num text-sm text-gray-400 font-mono">{project.num}</span>
               <span className="project-name text-4xl md:text-5xl font-light italic text-gray-900">{project.name}</span>
               <span className="project-loc text-[11px] tracking-widest text-gray-400 uppercase font-semibold">{project.loc}</span>

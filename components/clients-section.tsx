@@ -10,9 +10,10 @@ const clients = [
 ];
 
 export function ClientsSection() {
+  const reversedClients = [...clients].reverse();
   return (
-    <section id="clients" className="py-24 bg-[#111111] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 mb-16">
+    <section id="clients" className="py-16 bg-[#111111] overflow-hidden">
+      <div className="container mx-auto px-6 mb-16">
         <div className="flex items-center gap-4 group cursor-default">
           <h2 className="text-xl md:text-2xl tracking-[0.2em] font-light flex items-center gap-2">
             <span className="text-[#F5B82A] font-medium">ELITE</span>
@@ -53,13 +54,13 @@ export function ClientsSection() {
           transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
           className="flex flex-none gap-24 items-center min-w-full"
         >
-          {clients.reverse().map((client, i) => (
+          {reversedClients.map((client, i) => (
             <span key={`rev-${i}`} className="text-4xl md:text-6xl font-black text-white/5 hover:text-[#F5B82A]/80 tracking-tighter uppercase whitespace-nowrap transition-all duration-500 cursor-default">
               {client}
             </span>
           ))}
           {/* Duplicate for seamless loop */}
-          {clients.map((client, i) => (
+          {reversedClients.map((client, i) => (
             <span key={`rev-dup-${i}`} className="text-4xl md:text-6xl font-black text-white/5 hover:text-[#F5B82A]/80 tracking-tighter uppercase whitespace-nowrap transition-all duration-500 cursor-default">
               {client}
             </span>

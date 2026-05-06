@@ -13,6 +13,7 @@ export function FeaturedProjectSection() {
             src="/assets/impress_newtex/e2c31473-37a5-4da0-828f-7e971f0dac5e.jpg"
             alt="Impress Newtex"
             fill
+            sizes="(max-width: 1024px) 100vw, 50vw"
           />
         </div>
         <div className="featured-card">

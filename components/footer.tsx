@@ -12,8 +12,8 @@ export function Footer() {
   return (
     <footer className="bg-black text-white py-16 px-4 md:px-[60px] relative overflow-hidden">
       {/* Newsletter Banner */}
-      <div className="max-w-7xl mx-auto mb-20">
-        <div className="bg-brand-yellow px-8 py-10 md:px-12 md:py-14 flex flex-col md:flex-row items-center justify-between gap-8 rounded-sm">
+      <div className="container mx-auto px-6 mb-20">
+        {/* <div className="bg-brand-yellow px-8 py-10 md:px-12 md:py-14 flex flex-col md:flex-row items-center justify-between gap-8 rounded-sm">
           <div className="text-black text-center md:text-left">
             <h3 className="text-xl md:text-2xl font-bold tracking-tight mb-2 uppercase">Subscribe to our Newsletter!</h3>
             <p className="text-sm md:text-base opacity-85">Never Miss Anything From Radix By Signing Up To Our Newsletter.</p>
@@ -28,17 +28,17 @@ export function Footer() {
               <Send size={18} />
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
         {/* About Company */}
         <div className="space-y-6">
           <h4 className="text-lg font-bold uppercase tracking-wider text-white mb-6">About Company</h4>
           <div className="flex items-center gap-3">
-            <FooterLogo />
+            {/* <FooterLogo /> */}
             <span className="text-2xl font-black tracking-tighter">RADIX</span>
           </div>
           <p className="text-secondary-text text-sm leading-relaxed max-w-xs mt-4">
@@ -104,9 +104,9 @@ export function Footer() {
       </div>
 
       {/* Footer Bottom Bar */}
-      <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row justify-center items-center relative">
+      <div className="container mx-auto px-6 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-center items-center relative">
         <p className="text-[11px] tracking-wider text-secondary-text text-center">
-          © 2025 RADIX INTERIOR & CONSTRUCTIONS. Designed By Radix It Solutions.
+          © 2025 RADIX INTERIOR & CONSTRUCTIONS. Designed By Nazmul Hossain Adnan
         </p>
 
         {/* Back to top button */}

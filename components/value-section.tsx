@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 export function ValueSection() {
   return (
-    <section id="value" className="py-24 bg-[#fafafa]">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="value" className="py-16 bg-[#fafafa]">
+      <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
 
           {/* Column 1: Text & Image */}
@@ -28,6 +28,7 @@ export function ValueSection() {
                 src="/assets/incepta_factory/93e98b69-ad5e-48ea-b927-8fde0565db19.jpg" 
                 alt="Our Value" 
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover opacity-60 transition-transform duration-700 group-hover:scale-105" 
               />
               {/* Corner brackets */}
